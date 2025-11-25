@@ -4,14 +4,17 @@
 #include <iostream>
 #include <string>
 #include "Animal.hpp"
+#include "Brain.hpp"
 
 class   Cat : public Animal
 {
+    private:
+        Brain   *brain;
+
     public:
         Cat( void );
         Cat( const Cat& old );
         Cat &operator=( const Cat& old );
-        // std::string     getType( void ) const;
         void            makeSound( void ) const;
         ~Cat( void );
 };

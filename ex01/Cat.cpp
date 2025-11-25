@@ -3,7 +3,7 @@
 Cat::Cat( void )
 {
     type = "Cat";
-    // std::cout << "\x1b[95m" << "For debbuging: type = " << type << "\x1b[0m" << std::endl;
+    brain = new Brain(type);
     std::cout << "\x1b[95m" << "Cat:" << "\x1b[0m" << " default constructor called" << std::endl;
 }
 
@@ -23,11 +23,6 @@ Cat &Cat::operator=( const Cat& old )
     return (*this);
 }
 
-// std::string    Cat::getType( void ) const
-// {
-//     return (type);
-// }
-
 void    Cat::makeSound( void ) const
 {
     std::cout << "\x1b[1;33m" << "Meow" << "\x1b[0m" << std::endl;
@@ -35,5 +30,7 @@ void    Cat::makeSound( void ) const
 
 Cat::~Cat( void )
 {
+    std::cout << "\033[31m" << "(Cat) " << "\033[0m";
+    delete brain;
     std::cout << "\x1b[95m" << "Cat:" << "\x1b[0m" << " destructor called" << std::endl;
 }

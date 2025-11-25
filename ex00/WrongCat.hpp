@@ -11,7 +11,7 @@ class   WrongCat : public WrongAnimal
         WrongCat( void );
         WrongCat( const WrongCat& old );
         WrongCat &operator=( const WrongCat& old );
-        std::string     getType( void ) const;
+        // std::string     getType( void ) const;
         void            makeSound( void ) const;
         ~WrongCat( void );
 };

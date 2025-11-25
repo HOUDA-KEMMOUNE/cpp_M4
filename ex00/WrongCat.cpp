@@ -23,10 +23,10 @@ WrongCat &WrongCat::operator=( const WrongCat& old )
     return (*this);
 }
 
-std::string    WrongCat::getType( void ) const
-{
-    return (type);
-}
+// std::string    WrongCat::getType( void ) const
+// {
+//     return (type);
+// }
 
 void    WrongCat::makeSound( void ) const
 {

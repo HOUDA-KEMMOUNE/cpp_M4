@@ -3,7 +3,7 @@
 Dog::Dog( void )
 {
     type = "Dog";
-    // std::cout << "\x1b[95m" << "For debbuging: type = " << type << "\x1b[0m" << std::endl;
+    brain = new Brain(type);
     std::cout << "\x1b[38;2;0;41;102m" << "Dog:" << "\x1b[0m" << " default constructor called" << std::endl;
 }
 
@@ -23,11 +23,6 @@ Dog &Dog::operator=( const Dog& old )
     return (*this);
 }
 
-// std::string    Dog::getType( void ) const
-// {
-//     return (type);
-// }
-
 void    Dog::makeSound( void ) const
 {
     std::cout << "\x1b[96m" << "ruff" << "\x1b[0m" << std::endl;
@@ -35,5 +30,7 @@ void    Dog::makeSound( void ) const
 
 Dog::~Dog( void )
 {
+    std::cout << "\033[31m" << "(Dog) " << "\033[0m";
+    delete brain;
     std::cout << "\x1b[38;2;0;41;102m" << "Dog:" << "\x1b[0m" << " destructor called" << std::endl;
 }
