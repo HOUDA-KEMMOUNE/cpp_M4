@@ -27,10 +27,10 @@ std::string    Animal::getType( void ) const
     return (type);
 }
 
-void    Animal::makeSound( void ) const
-{
-    std::cout << "\033[31mFor wich animal ?\033[0m" << std::endl;
-}
+// void    Animal::makeSound( void ) const
+// {
+//     std::cout << "\033[31mFor wich animal ?\033[0m" << std::endl;
+// }
 
 Animal::~Animal( void )
 {
