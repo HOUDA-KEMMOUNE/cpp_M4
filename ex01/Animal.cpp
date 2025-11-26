@@ -9,7 +9,7 @@ Animal::Animal( void )
 Animal::Animal( const Animal& old )
 {
     *this = old;
-    std::cout << "\x1b[92m" << "Animal:" << "\x1b[0m" << ": copy assignement operator called" << std::endl;
+    std::cout << "\x1b[92m" << "Animal:" << "\x1b[0m" << " copy constructor called" << std::endl;
 }
 
 Animal  &Animal::operator=( const Animal& old )

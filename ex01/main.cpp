@@ -9,20 +9,19 @@ int main()
     const Animal* j = new Dog();
     const Animal* i = new Cat();
 
-    delete j; // should call Dog destructor correctly
-    delete i; // should call Cat destructor correctly
+    delete j;
+    delete i;
 
     std::cout << std::endl;
 
     std::cout << "---- Array of Animals test ----" << std::endl;
 
-    const int size = 10;               // or any number you want
+    const int size = 10;
     const Animal* animals[size];
 
-    // Fill first half with Dogs, second half with Cats
     for (int k = 0; k < size; k++)
     {
-        if (k < size / 2)
+        if (k % 2 == 0)
             animals[k] = new Dog();
         else
             animals[k] = new Cat();
@@ -30,10 +29,9 @@ int main()
 
     std::cout << std::endl;
 
-    // Delete each element
     for (int k = 0; k < size; k++)
     {
-        delete animals[k];             // must delete as Animal* and call correct destructor
+        delete animals[k];
     }
 
     std::cout << std::endl;
