@@ -2,7 +2,7 @@
 
 WrongAnimal::WrongAnimal( void )
 {
-    type = "";
+    type = "WrongAnimal doesn't have a specific type :/";
     std::cout << "\x1b[92m" << "WrongAnimal:" << "\x1b[0m" << "\x1b[31m" << " default constructor called" << "\x1b[0m" << std::endl;
 }
 
@@ -29,7 +29,7 @@ std::string    WrongAnimal::getType( void ) const
 
 void    WrongAnimal::makeSound( void ) const
 {
-    std::cout << "\033[31m??\033[0m" << std::endl;
+    std::cout << "\033[31mWhich sound ??\033[0m" << std::endl;
 }
 
 WrongAnimal::~WrongAnimal( void )

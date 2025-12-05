@@ -11,7 +11,7 @@ int main()
     const Animal* i = new Cat();
     std::cout << j->getType() << " " << std::endl;
     std::cout << i->getType() << " " << std::endl;
-    i->makeSound(); //will output the cat sound!
+    i->makeSound();
     j->makeSound();
     meta->makeSound();
 
@@ -22,6 +22,9 @@ int main()
 
     std::cout << wc->getType() << " " << std::endl;
     std::cout << Wrong_general->getType() << " " << std::endl;
+
+    wc->makeSound();
+    Wrong_general->makeSound();
 
     delete  wc;
     delete  Wrong_general;

@@ -2,7 +2,7 @@
 
 Animal::Animal( void )
 {
-    type = "";
+    type = "Animal doesn't have a specific type :/";
     std::cout << "\x1b[92m" << "Animal:" << "\x1b[0m" << " default constructor called" << std::endl;
 }
 
